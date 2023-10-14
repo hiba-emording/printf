@@ -9,11 +9,11 @@
 
 int _printf(const char *format, ...)
 {
-va_list args;
-size_t k, j = 0, count = 0;
 char specifiers[] = {'c', 's', '%', 'i', 'd', 'b'};
 int (*handlers[])(va_list) = {_print_char, _print_string, _print_percent,
-_print_binary, _print_int, _print_int};
+_print_int, _print_int, _print_binary};
+va_list args;
+size_t k, j = 0, count = 0;
 
 va_start(args, format);
 	while (format && format[j])
@@ -23,6 +23,7 @@ va_start(args, format);
 			j++;
 			if (format[j] == '\0')
 			{
+				va_end(args);
 				return (-1);
 			}
 			else
@@ -39,7 +40,7 @@ va_start(args, format);
 		}
 		else
 		{
-			count += write(1, &format[j], 1);
+		count += write(1, &format[j], 1);
 		}
 		j++;
 	}
