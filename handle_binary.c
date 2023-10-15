@@ -16,7 +16,7 @@ char dig;
 
 	if (n == 0)
 	{
-		i += write(1, "0", 1);
+		i += _printchar(48);
 	}
 
 	else
@@ -31,7 +31,7 @@ char dig;
 		{
 			dig = bdig[j] + '0';
 
-			i += write(1, &dig, 1);
+			i += _printchar(dig);
 		}
 	}
 

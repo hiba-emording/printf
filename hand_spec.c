@@ -10,7 +10,7 @@
 
 int handspec(const char *format, va_list args)
 {
-struct spec_map s_m[] = {
+matching s_m[] = {
 {'s', handle_string},
 {'c', handle_char},
 {'%', handle_percent},

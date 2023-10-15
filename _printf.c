@@ -25,7 +25,7 @@ va_start(args, format);
 
 		else
 		{
-			write(1, format, 1);
+			_printchar(*format);
 			count++;
 		}
 		format++;
