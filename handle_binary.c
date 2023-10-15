@@ -16,7 +16,7 @@ char dig;
 
 	if (n == 0)
 	{
-		i += _printchar(48);
+		i += _printchar('0');
 	}
 
 	else

@@ -10,7 +10,7 @@ int handle_percent(va_list args)
 {
 (void)args;
 
-_printchar(37);
+_printchar('%');
 
 return (1);
 }

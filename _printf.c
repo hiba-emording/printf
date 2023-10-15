@@ -9,25 +9,24 @@
 
 int _printf(const char *format, ...)
 {
-int count = 0;
 va_list args;
+int count = 0;
 
 va_start(args, format);
 
-	while (*format != '\0')
+	while (*format)
 	{
-
 		if (*format == '%')
 		{
 			format++;
-			handspec(format, args);
+			count += handspec(format, args);
 		}
 
 		else
 		{
 			_printchar(*format);
+			count++;
 		}
-		count++;
 		format++;
 	}
 

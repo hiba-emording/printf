@@ -17,7 +17,7 @@ typedef struct spec_map
 {
 	char spec;
 	int (*hand)(va_list);
-} matching;
+} spec_map;
 
 
 int _printchar(char c);
