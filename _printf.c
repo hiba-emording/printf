@@ -20,7 +20,8 @@ va_start(args, format);
 		if (*format == '%')
 		{
 			format++;
-			count = handspec(format, args);
+			handspec(format, args);
+			count++;
 		}
 
 		else
