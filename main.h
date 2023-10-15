@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <limits.h>
 
 int _printf(const char *format, ...);
 int handspec(const char *format, va_list args);
