@@ -13,7 +13,14 @@ int len, i;
 
 	if (s == NULL)
 	{
-		return (0);
+		s = "(null)";
+		len = _strlen(s);
+
+		for (i = 0; i < len; i++)
+		{
+			_printchar(s[i]);
+		}
+		return (len);
 	}
 
 	else
