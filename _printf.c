@@ -21,14 +21,13 @@ va_start(args, format);
 		{
 			format++;
 			handspec(format, args);
-			count++;
 		}
 
 		else
 		{
 			_printchar(*format);
-			count++;
 		}
+		count++;
 		format++;
 	}
 
