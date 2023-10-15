@@ -13,22 +13,16 @@ int len, i;
 
 	if (s == NULL)
 	{
-		s = "(null)";
-		len = _strlen(s);
-
-		for (i = 0; i < len; i++)
-		{
-			_printchar(s[i]);
-		}
-		return (len);
+		return (0);
 	}
 
 	else
 	{
 		len = _strlen(s);
-		for (i = 0; i < len; i++)
+		for (i = 0; (s[i] != '\0'); i++)
 		{
 			_printchar(s[i]);
+
 		}
 
 		return (len);
