@@ -12,7 +12,7 @@ int n = va_arg(args, int);
 int count = 0;
 int div = 1;
 int temp;
-char digit;
+int digit;
 
 	if (n < 0)
 	{
