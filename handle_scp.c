@@ -6,12 +6,15 @@
  * Return: number of chars printed.
  */
 
-
 int handle_char(va_list args)
 {
 char c = va_arg(args, int);
+int count = 0;
 
-return (write(1, &c, 1));
+write(1, &c, 1);
+count++;
+
+return (count);
 }
 
 /**
@@ -20,16 +23,21 @@ return (write(1, &c, 1));
  * Return: number of chars printed.
  */
 
-
 int handle_string(va_list args)
 {
 char *s = va_arg(args, char *);
-int len = 0;
+int len = 0, count = 0;
 
-while (s[len])
-len++;
-
-return (write(1, s, len));
+	while (s && s[len] != '\0')
+	{
+		len++;
+	}
+	if (len > 0)
+	{
+		write(1, s, len);
+		count += len;
+	}
+	return (count);
 }
 
 /**
@@ -38,10 +46,14 @@ return (write(1, s, len));
  * Return: number of chars printed (1).
  */
 
-
 int handle_percent(va_list args)
 {
+int count = 0;
+
 (void)args;
 
-return (write(1, "%", 1));
+	write(1, "%", 1);
+	count++;
+
+return (count);
 }
