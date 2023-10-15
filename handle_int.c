@@ -19,7 +19,7 @@ char digit;
 		write(1, "-", 1);
 		count++;
 		n = -n;
-		temp = n
+		temp = n;
 	}
 
 	while (temp > 9)
