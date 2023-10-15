@@ -1,17 +1,18 @@
 #include "main.h"
 
 /**
- * _print_int - prints an int.
+ * handle_int - prints an int.
  * @args: A va_list containing the intger to be printed.
  * Return: number of chars printed.
  */
 
-int _print_int(va_list args)
+int handle_int(va_list args)
 {
 int n = va_arg(args, int);
 int i = 0;
 int div = 1;
 int temp = n;
+char digit;
 
 	if (n < 0)
 	{
@@ -31,7 +32,7 @@ int temp = n;
 	while (div > 0)
 	{
 
-		char digit = (temp / div) + '0';
+		digit = (temp / div) + '0';
 
 		write(1, &digit, 1);
 		i++;

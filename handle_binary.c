@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _print_binary - prints an unsigned int in binary.
+ * handle_binary - prints an unsigned int in binary.
  * @args: A va_list containing unsigned int to be printed.
  * Return: number of chars printed.
  */
 
-int _print_binary(va_list args)
+int handle_binary(va_list args)
 {
 unsigned int n = va_arg(args, unsigned int);
 int i = 0;
