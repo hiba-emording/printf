@@ -9,16 +9,17 @@
 int handle_int(va_list args)
 {
 int n = va_arg(args, int);
-int i = 0;
+int count = 0;
 int div = 1;
-int temp = n;
+int temp;
 char digit;
 
 	if (n < 0)
 	{
 		write(1, "-", 1);
-		i++;
+		count++;
 		n = -n;
+		temp = n
 	}
 
 	while (temp > 9)
@@ -35,10 +36,10 @@ char digit;
 		digit = (temp / div) + '0';
 
 		write(1, &digit, 1);
-		i++;
+		count++;
 		temp %= div;
 		div /= 10;
 	}
 
-	return (i);
+	return (count);
 }
