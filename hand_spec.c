@@ -20,7 +20,7 @@ spec_map s_m[] = {
 {'u', handle_unsigned},
 {'o', handle_octal},
 {'x', handle_hex},
-{'X', handle_hex},
+{'X', handle_HEX},
 };
 
 int count = 0;

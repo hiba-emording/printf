@@ -23,7 +23,7 @@ typedef struct spec_map
 int _printchar(char c);
 int _strlen(char *s);
 int _isupper(int c);
-int print_number(unsigned int n, int base, int (*uppercase)(int));
+int print_number(unsigned int n, int base, int uppercase);
 
 int _printf(const char *format, ...);
 int handspec(const char *format, va_list args);
@@ -37,6 +37,6 @@ int handle_binary(va_list args);
 int handle_unsigned(va_list args);
 int handle_octal(va_list args);
 int handle_hex(va_list args);
-
+int handle_HEX(va_list args);
 
 #endif
