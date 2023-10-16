@@ -22,6 +22,7 @@ spec_map s_m[] = {
 {'x', handle_hex},
 {'X', handle_HEX},
 {'S', handle_sp_str},
+{'p', handle_pointer},
 };
 
 int count = 0;

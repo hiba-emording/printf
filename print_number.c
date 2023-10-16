@@ -8,7 +8,7 @@
  * Return: number of chars printed.
  */
 
-int print_number(unsigned int n, int base, int uppercase)
+int print_number(unsigned long n, int base, int uppercase)
 {
 int digits[64], count = 0, i = 0, remains;
 char digit;
