@@ -17,6 +17,10 @@ spec_map s_m[] = {
 {'d', handle_int},
 {'i', handle_int},
 {'b', handle_binary},
+{'u', handle_unsigned},
+{'o', handle_octal},
+{'x', handle_hex},
+{'X', handle_hex},
 };
 
 int count = 0;
