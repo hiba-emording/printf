@@ -21,6 +21,7 @@ spec_map s_m[] = {
 {'o', handle_octal},
 {'x', handle_hex},
 {'X', handle_HEX},
+{'S', handle_sp_str},
 };
 
 int count = 0;
