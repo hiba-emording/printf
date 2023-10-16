@@ -10,21 +10,15 @@ int handle_string(va_list args)
 {
 char *s = va_arg(args, char *);
 int count = 0;
-int i;
 
-	if (s == NULL)
+	if (s)
 	{
-		return (0);
-	}
-
-	else
-	{
-		for (i = 0; (s[i] != '\0'); i++)
+		while (*s)
 		{
-			_printchar(s[i]);
+			_printchar(*s);
 			count++;
+			s++;
 		}
-
-		return (count);
 	}
+	return (count);
 }
