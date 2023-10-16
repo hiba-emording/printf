@@ -9,7 +9,8 @@
 int handle_string(va_list args)
 {
 char *s = va_arg(args, char *);
-int len, i;
+int count = 0;
+int i;
 
 	if (s == NULL)
 	{
@@ -18,13 +19,12 @@ int len, i;
 
 	else
 	{
-		len = _strlen(s);
 		for (i = 0; (s[i] != '\0'); i++)
 		{
 			_printchar(s[i]);
-
+			count++;
 		}
 
-		return (len);
+		return (count);
 	}
 }
