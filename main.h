@@ -40,7 +40,6 @@ int handle_HEX(va_list args);
 int handle_sp_str(va_list args);
 int handle_pointer(va_list args);
 int handle_rev(va_list args);
-int handle_rot13(va_list args);
 
 
 #endif
