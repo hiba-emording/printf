@@ -24,14 +24,7 @@ if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		if (*format == '%')
 		{
 			format++;
-			if (*format == '\0')
-			{
-				break;
-			}
-			else
-			{
 			count += handspec(format, args);
-			}
 		}
 
 		else
