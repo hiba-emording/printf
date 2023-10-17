@@ -8,26 +8,21 @@
 
 int handle_char(va_list args)
 {
-char *c = va_arg(args, char *);
+char c = va_arg(args, int);
 
-char *nil_str = "(nil)";
+char null_char = '\0';
 
 int count = 0;
 
-	if (c == NULL)
+	if (c == '\0')
 	{
-		while (*nil_str)
-		{
-			_printchar(*nil_str);
-			count++;
-			nil_str++;
-		}
-
+		_printchar(null_char);
+		count++;
 	}
 
 	else
 	{
-		_printchar(*c);
+		_printchar(c);
 		count++;
 	}
 
