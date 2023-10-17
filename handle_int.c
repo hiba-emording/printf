@@ -9,43 +9,26 @@
 int handle_int(va_list args)
 {
 int n = va_arg(args, int);
-int count = 0, div = 1;
-int temp = n, digit;
+int count = 0;
 
-	if (n < 0)
+	if (n == INT_MIN)
+	{
+		count += _printchar('-');
+		count += print_positive_int(214748364);
+		count += _printchar('8');
+	}
+
+	else if (n < 0)
 	{
 		_printchar('-');
 		count++;
+		count += print_positive_int(-n);
 	}
-	if (n == 0)
-	{
-		_printchar('0');
-		count++;
-	}
+
 	else
 	{
-		while (temp > 9 || temp < -9)
-		{
-			temp /= 10;
-			div *= 10;
-		}
-		if (n < 0)
-		{
-			temp = -n;
-		}
-		else
-		{
-			temp = n;
-		}
-		while (div > 0)
-		{
-
-			digit = (temp / div) + '0';
-			_printchar(digit);
-			count++;
-			temp %= div;
-			div /= 10;
-		}
+		count += print_positive_int(n);
 	}
+
 	return (count);
 }
