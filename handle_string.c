@@ -11,7 +11,11 @@ int handle_string(va_list args)
 char *s = va_arg(args, char *);
 int count = 0;
 
-	if (s)
+	if (s == NULL)
+	{
+		s = "(null)";
+	}
+	else
 	{
 		while (*s)
 		{
