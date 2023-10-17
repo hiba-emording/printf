@@ -21,16 +21,12 @@ typedef struct spec_map
 
 
 int _printchar(char c);
-int _strlen(char *s);
-void _revstr(char *s);
 int print_positive_int(unsigned int n);
-
 int print_number(unsigned long n, int base, int uppercase);
 int print_ascii_hex(char c);
 
 int _printf(const char *format, ...);
 int handspec(const char *format, va_list args);
-
 
 int handle_char(va_list args);
 int handle_string(va_list args);
