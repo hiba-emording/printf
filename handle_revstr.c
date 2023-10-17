@@ -10,23 +10,25 @@
 int handle_rev(va_list args)
 {
 char *s = va_arg(args, char *);
-int i;
 int l = 0;
+int i = 0;
+int count = 0;
 
 	if (s == NULL)
 	{
-		s = "(null)"
-
-		while (s[l] != '\0')
-		{
-			l++;
-		}
-
-		for (i = l - 1; i >= 0; i--)
-		{
-			_printchar(s[i]);
-		}
-
+		s = "(null)";
 	}
-	return (l);
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	for (l = i - 1; l >= 0; l--)
+	{
+		_printchar(s[l]);
+		count++;
+	}
+
+	return (count);
 }
