@@ -19,6 +19,10 @@ if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	return (-1);
 }
 
+else if (format[0] == '%' && format[1] == ' ' && !format[2] == '\0')
+{
+	return (-1);
+}
 	while (*format)
 	{
 		if (*format == '%')
