@@ -24,8 +24,7 @@ int i;
 			count++;
 		}
 
-		return (count);
 	}
 
-	return (0);
+	return (count);
 }
