@@ -10,6 +10,7 @@ int handle_string(va_list args)
 {
 char *s = va_arg(args, char *);
 int count = 0;
+char *null_string = "(null)";
 
 	if (s)
 	{
@@ -20,5 +21,16 @@ int count = 0;
 			s++;
 		}
 	}
+
+	else
+	{
+		while (*null_string)
+		{
+			_printchar(*null_string);
+			count++;
+			null_string++;
+		}
+	}
+
 	return (count);
 }
