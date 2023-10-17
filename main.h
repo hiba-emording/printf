@@ -24,6 +24,7 @@ int _printchar(char c);
 int print_positive_int(unsigned int n);
 int print_number(unsigned long n, int base, int uppercase);
 int print_ascii_hex(char c);
+char *rot13(char *str);
 
 int _printf(const char *format, ...);
 int handspec(const char *format, va_list args);
@@ -40,5 +41,7 @@ int handle_HEX(va_list args);
 int handle_sp_str(va_list args);
 int handle_pointer(va_list args);
 int handle_rev(va_list args);
+int handle_rot13(va_list args);
+
 
 #endif

@@ -24,6 +24,7 @@ spec_map s_m[] = {
 {'S', handle_sp_str},
 {'p', handle_pointer},
 {'r', handle_rev},
+{'R', handle_rot13},
 };
 
 int count = 0;
