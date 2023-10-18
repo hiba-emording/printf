@@ -28,7 +28,7 @@ if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 			{
 				format++;
 			}
-			count += handspec(format, args;)
+			count += handspec(format, args);
 		}
 
 		else
