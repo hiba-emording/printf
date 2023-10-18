@@ -39,5 +39,14 @@ size_t i;
 		}
 	}
 
+	if (i == sizeof(s_m) / sizeof(s_m[0]))
+	{
+		_printchar('%');
+		count++;
+		_printchar(*format);
+		count++;
+	}
+
+
 	return (count);
 }
